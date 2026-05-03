@@ -47,25 +47,19 @@ symptom bot/
 
 ## 🚀 Setup & Run
 
-**1. Clone the repo**
-```bash
-git clone https://github.com/yourusername/symptobot.git
-cd symptobot
-```
-
-**2. Install dependencies**
+**1. Install dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-**3. Add your Groq API key**
+**2. Add your Groq API key**
 
 Get a free key at [console.groq.com](https://console.groq.com), then add it to `.env`:
 ```
 GROQ_API_KEY=gsk_your_key_here
 ```
 
-**4. Run the app**
+**2. Run the app**
 ```bash
 python app.py
 ```
