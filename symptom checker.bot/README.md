@@ -79,7 +79,7 @@ Visit `http://localhost:5000` in your browser.
 
 ## Disclaimer
 
-SymptoBot is an academic project for educational purposes only. It is **not a substitute** for professional medical advice, diagnosis, or treatment. Always consult a qualified doctor.
+AI Symptom Checker Bot is an academic project for educational purposes only. It is **not a substitute** for professional medical advice, diagnosis, or treatment. Always consult a qualified doctor.
 
 
 ## License
