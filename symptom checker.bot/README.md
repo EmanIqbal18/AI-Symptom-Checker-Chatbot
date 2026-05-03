@@ -8,8 +8,8 @@ A Python AI powered symptom checker that analyze symptoms from natural language 
 - AI powered disease prediction from symptoms
 - Confidence scores & severity classification (Mild / Moderate / Severe)
 - Health recommendations per disease
-- Emergency alert for life-threatening symptom combinations
-- Per-user diagnosis history
+- Emergency alert for life threatening symptom combinations
+- Per user diagnosis history
 - Dark futuristic UI with autocomplete symptom input
 
 ## Project Link
