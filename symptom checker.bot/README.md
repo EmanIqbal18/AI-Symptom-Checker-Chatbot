@@ -2,67 +2,94 @@
 
 A Python AI powered symptom checker that analyze symptoms from natural language input and provide possible diagnoses with health recommendations.
 
+
 ## Features
 
-- Free text symptom input describe how you feel naturally
-- AI does all the medical reasoning (no rule-based logic)
-- Returns possible conditions, severity, and actionable recommendations
-- Flask based REST API with a chat interface
-- Session based conversation history
+- AI powered disease prediction from symptoms
+- Confidence scores & severity classification (Mild / Moderate / Severe)
+- Health recommendations per disease
+- Emergency alert for life-threatening symptom combinations
+- Per-user diagnosis history
+- Dark futuristic UI with autocomplete symptom input
 
 ## Project Link
-GitHub Repository:https://github.com/EmanIqbal18/AI-Symptom-Checker-Chatbot
+GitHub Repository: https://github.com/EmanIqbal18/AI-Symptom-Checker-Chatbot
 
-## Setup
+## Tech Stack
 
-```bash
-# 1. Clone and enter the project
-git clone <repo-url>
-cd symptom-checker
+| Layer | Technology |
+|-------|-----------|
+| Backend | Python, Flask |
+| AI / NLP | Groq API — LLaMA 3.3 70B | AI logic
+| Frontend | HTML, CSS, JavaScript |
+| Data | CSV dataset (41 diseases) |
+| Storage | JSON file |
 
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. Set your Anthropic API key
-export ANTHROPIC_API_KEY=your_key_here
-
-# 4. Run
-python app.py
-# → http://localhost:5000
-```
-
+---
 
 ## Project Structure
 
 ```
-symptom-checker/
-├── app.py   
-├── history.json
-├── dataset.csv    
+symptom bot/
+├── app.py              
+├── dataset.csv         
+├── history.json         
 ├── requirements.txt    
+├── .env                
 ├── templates/
-│   └── index.html   
-|   └── login.html
+│   ├── login.html      
+│   └── index.html      
 └── static/
-    ├── css/style.css
+    └── style.css       
 ```
 
+---
 
-## API
+## 🚀 Setup & Run
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET`  | `/` | Chat UI |
-| `POST` | `/api/chat` | Analyze symptoms `{"message": "..."}` |
-| `POST` | `/api/reset` | Reset session |
+**1. Clone the repo**
+```bash
+git clone https://github.com/yourusername/symptobot.git
+cd symptobot
+```
+
+**2. Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+**3. Add your Groq API key**
+
+Get a free key at [console.groq.com](https://console.groq.com), then add it to `.env`:
+```
+GROQ_API_KEY=gsk_your_key_here
+```
+
+**4. Run the app**
+```bash
+python app.py
+```
+
+Visit `http://localhost:5000` in your browser.
 
 
-## Requirements
 
-- Python 3.8+
-- Flask
-- `anthropic` Python SDK
-- Anthropic API key
+## How It Works
+
+1. User logs in and enters symptoms (e.g. `fever, cough, headache`)
+2. Flask sends the symptoms to the Groq LLaMA 3.3 model
+3. The AI returns a structured JSON response with predicted diseases
+4. Results are displayed with confidence rings, severity badges, and recommendations
+5. Each diagnosis is saved to `history.json`
 
 
-This project is informational purposes only. Not a substitute for professional medical advice.
+## Disclaimer
+
+SymptoBot is an academic project for educational purposes only. It is **not a substitute** for professional medical advice, diagnosis, or treatment. Always consult a qualified doctor.
+
+
+## License
+
+MIT License free to use for educational purposes.
+
+---
